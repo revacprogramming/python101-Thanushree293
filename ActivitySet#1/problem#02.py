@@ -1,3 +1,3 @@
-# Why Program
-
-print("hello world")
+a = []
+a.append(a)
+print(a)
