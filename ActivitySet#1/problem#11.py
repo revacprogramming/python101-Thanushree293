@@ -18,3 +18,4 @@ for line in handle:
     counts[hour] = counts.get(hour, 0) + 1
 for k,v in sorted(counts.items()):
      print(k,v)
+  #dataset/mbox-short.txt
