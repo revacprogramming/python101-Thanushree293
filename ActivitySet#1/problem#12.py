@@ -1,16 +1,14 @@
 # Regular Expressions
 # https://www.py4e.com/lessons/regex
-from turtle import *
- 
-bgcolor('black')
-speed(0)
-hideturtle()
-for i in range(120):
-     color('red')
-     circle(i)
-     color("orange")
-     circle(i*0.9)
-     right(3)
-     forward(5)
-done()
-3fedfv
+import re
+x = """Why should you learn to write programs? 7746
+12 1929 8827
+Writing programs (or programming) is a very creative 
+7 and rewarding activity.  You can write programs for 
+many reasons, ranging from making your living to solving
+8837 a difficult data analysis problem to having fun to helping 128
+someone else solve a problem.  This book assumes that 
+everyone needs to know how to program ..."""
+y = sum([int(i) for i in re.findall("[0-9]+",x)])
+print(y)
+
