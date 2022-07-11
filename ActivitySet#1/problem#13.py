@@ -1,12 +1,26 @@
-import re
-x = """Why should you learn to write programs? 7746
-12 1929 8827
-Writing programs (or programming) is a very creative 
-7 and rewarding activity.  You can write programs for 
-many reasons, ranging from making your living to solving
-8837 a difficult data analysis problem to having fun to helping 128
-someone else solve a problem.  This book assumes that 
-everyone needs to know how to program ..."""
-y = sum([int(i) for i in re.findall("[0-9]+",x)])
-print(y)
+# Network Programming
+# https://www.py4e.com/lessons/network
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
+import ssl
 
+# Ignore SSL certificate errors
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+
+url = input('Enter URL - ')
+c = int(input('Enter count:'))
+p = int(input('Enter position:'))
+
+for i in range(c):
+    html = urllib.request.urlopen(url, context=ctx).read()
+    soup = BeautifulSoup(html, 'html.parser')
+    gh=1
+    # Retrieve all of the anchor tags
+    tags = soup('a')
+    for tag in tags:
+        if(gh==p):
+           url=tag.get('href', None)
+        gh+=1
+    print('Retrieving:',url)
