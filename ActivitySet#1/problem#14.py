@@ -5,12 +5,11 @@ from turtle import *
 bgcolor('black')
 speed(0)
 hideturtle()
-for i in range(120):
-     color('red')
+for i in range(200):
+     color('purple')
      circle(i)
-     color("orange")
+     color("blue")
      circle(i*0.9)
-     right(3)
-     forward(5)
+     left(3)
+     backward(5)
 done()
-3fedfv
