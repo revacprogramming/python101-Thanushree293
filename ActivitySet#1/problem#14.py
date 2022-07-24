@@ -1,5 +1,4 @@
-# Using Web Services
-# https://www.py4e.com/lessons/servces
+#EXTRA (INTERNET PROBLEM)
 from turtle import *
  
 bgcolor('black')
