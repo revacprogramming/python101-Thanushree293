@@ -1,4 +1,5 @@
-x~/python101-Thanushree293-7$ ipython
+#regular expressions
+"""x~/python101-Thanushree293-7$ ipython
 bash: ipython: command not found
 ~/python101-Thanushree293-7$ python
 Python 3.8.12 (default, Sep 10 2021, 00:16:05) 
@@ -119,4 +120,4 @@ SyntaxError: illegal target for annotation
     z=X-sir: sff44 innocent
            ^
 SyntaxError: invalid syntax
->>> 
+>>> """"""
